@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+.app {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(18, 18, 21);
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  width: 35vw;
+  margin: 0 auto;
+}
+
+.advice_block {
+  width: 100%;
+  height: 35vh;
+  background-color: rgb(42, 42, 48);
+  border-radius: 1vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.number {
+  color: aquamarine;
+  margin: 1.5rem auto;
+}
+
+.text {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 0 2rem;
+}
+
+/* ------------ DICE ------------ */
+
+$border-radius: 1vmin;
+$duration: 2s;
+$face-size: 25vmin;
+$point-size: 5vmin;
+$point-position: 2.5vmin;
+$face-length: 25vmin;
+
+.dice-container{  
+  width: $face-size;
+  aspect-ratio: 1;
+  cursor: pointer;
+}
+
+.dice{
+  position: relative;
+  width: $face-size;
+  aspect-ratio: 1;
+  border-radius: $border-radius;
+  transform-style: preserve-3d; 
+  transform-origin: 50% 50% ($face-size*-.5);
+  transform: rotateX(180deg) rotateY(180deg);
+  transition: transform $duration ease-in-out;
+}
+
+.face{
+  position: absolute;
+  background: radial-gradient(circle at center, #eee, #ccc);
+  width: $face-size;
+  aspect-ratio: 1;
+  border-radius: $border-radius; 
+  transform: rotateX(0deg) rotateY(180deg);
+  transform-origin: 50% 50% ($face-size*-.5);
+  /*backface-visibility: hidden;*/
+}
+
+.face:nth-child(1){
+  transform: rotateY(0deg);
+}
+
+.face:nth-child(2){
+  transform: rotateY(90deg);
+}
+
+.face:nth-child(3){
+  transform: rotateY(180deg);
+}
+
+.face:nth-child(4){
+  transform: rotateY(270deg);
+}
+
+.face:nth-child(5){
+  transform: rotateX(90deg);
+}
+
+.face:nth-child(6){
+  transform: rotateX(270deg);
+}
+
+.point{
+  position: absolute;
+  width: $point-size;
+  aspect-ratio: 1;
+  border-radius: 100%;
+  align-self: center;
+  justify-self: center;
+  background:#444;
+  box-shadow:inset 5px 0 10px #222;
+}
+
+.point-top{
+  top: $point-position;
+}
+
+.point-middle{
+  top: ($face-size - $point-size)/2;
+}
+
+.point-bottom{
+  bottom: $point-position;
+}
+
+.point-left{
+  left: $point-position;
+}
+
+.point-center{
+  left: ($face-size - $point-size)/2;
+}
+
+.point-right{
+  right: $point-position;
+}
