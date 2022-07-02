@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -29,28 +31,35 @@
 
 .number {
   color: aquamarine;
-  margin: 1.5rem auto;
+  margin: 1.8rem auto;
+  letter-spacing: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
 }
 
 .text {
   text-align: center;
   font-size: 1.5rem;
   padding: 0 2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
 }
 
 /* ------------ DICE ------------ */
 
-$border-radius: 1vmin;
+$border-radius: 0.1vmin;
 $duration: 2s;
-$face-size: 25vmin;
-$point-size: 5vmin;
-$point-position: 2.5vmin;
-$face-length: 25vmin;
+$face-size: 3vmin;
+$point-size: 0.8vmin;
+$point-position: 0.2vmin;
 
 .dice-container{  
   width: $face-size;
   aspect-ratio: 1;
   cursor: pointer;
+  background-color: aquamarine;
+  border-radius: 100%;
+  padding: 1.2rem;
 }
 
 .dice{
@@ -66,7 +75,7 @@ $face-length: 25vmin;
 
 .face{
   position: absolute;
-  background: radial-gradient(circle at center, #eee, #ccc);
+  background: radial-gradient(circle at center, #444, #222);
   width: $face-size;
   aspect-ratio: 1;
   border-radius: $border-radius; 
@@ -106,8 +115,8 @@ $face-length: 25vmin;
   border-radius: 100%;
   align-self: center;
   justify-self: center;
-  background:#444;
-  box-shadow:inset 5px 0 10px #222;
+  background:#eee;
+  box-shadow:inset 5px 0 10px #ccc;
 }
 
 .point-top{
