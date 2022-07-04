@@ -4,6 +4,7 @@ import axios from "axios";
 import { useState } from "react";
 import { roll } from "./utils/RollDice";
 import { useRef } from "react";
+import { TiMediaPause } from 'react-icons/ti';
 
 const App: FC = () => {
   const [advice, setAdvice] = useState<string>(
@@ -35,6 +36,7 @@ const App: FC = () => {
         <div className="advice_block">
           <div className="number">ADVICE # {id}</div>
           <div className="text">"{advice}"</div>
+          <div className="separate"><TiMediaPause className="separate_icon"/></div>
           <div
             className="dice-container"
             onClick={() => {
